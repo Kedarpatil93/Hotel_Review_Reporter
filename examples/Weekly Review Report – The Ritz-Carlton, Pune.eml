@@ -1,0 +1,172 @@
+Delivered-To: kedarhpatil93@gmail.com
+Received: by 2002:a17:505:51db:b0:1d4e:765e:1d9d with SMTP id sc27csp664610njb;
+        Tue, 26 Aug 2025 12:46:01 -0700 (PDT)
+X-Received: by 2002:a05:6000:188d:b0:3ca:c607:ad8a with SMTP id ffacd0b85a97d-3cac607b234mr4336559f8f.57.1756237560927;
+        Tue, 26 Aug 2025 12:46:00 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1756237560; cv=none;
+        d=google.com; s=arc-20240605;
+        b=BrGhq2tGzFJMfvy2EP4c1gAO0YwbBbcNKiiuTFKa3BSENHKXxMDU4av4kOIouAgMyw
+         hLfeDxYun4B2Qvx5v9BONXbhFPcrZToZqmnORPXZ+ddiZfVgxJ1Uz31MIPeHmVy9VKR/
+         MambO+UGhIXgkzUvDIlrwgEwTJVHB2sGILhRMkFAMqocwkunX0G8uX56bs8xY5znHZps
+         cIVZ88cHii0KwjaYjDdJ9G+5PY7Bp8grSnrzLtAVyUmRViPt4xrG+xHeOgicw0UTfQ74
+         hNinBNB1lLenBgqHRRIHxLiksZuuCZdJ20zLlLt9LjMA7SGRWfSv8arr5lJplmFHTqsP
+         HD3A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:message-id:subject:to:from:dkim-signature;
+        bh=seQQ83MMHy5xSz6SvwbAyYwNeZvVrBP23jqjbg0R+tA=;
+        fh=70d+IirJT14HHclFn9r40ef7VnQREnRWs78ZrwMIXJA=;
+        b=WzsIymwG3JCwrs8u9yrRVjxQM+gq+T3Ve9ghXzmYklILUfmeKA/K2Owea+it2G43FQ
+         B41lFtOKnhyVO6P4aGtUn0/Eavx8kw1uQHELApmw8NIwPrmEV4ywyfMrk2RJJnNPgeo4
+         jS0BOthfpykteBuNyp3UD2byqs3s4U0p1xCMSsGRM3Gtw+XRQVkD/r+pFYPLqOqij2KO
+         AJfn87kRStM6xsMInzgurUt1e5YT2RliT/tALOF4UAj5pzphUA4LprnhMs8+/rtfdb0C
+         O6k7RGhuEOYqxyXWx9o1EDoGvF9eAwJbgUCQGKlEiv+lM11+QzoBCwH4VziyqKjVHzS+
+         ERJg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LIMAJEq3;
+       spf=pass (google.com: domain of kedarhpmakeapp@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=kedarhpmakeapp@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <kedarhpmakeapp@gmail.com>
+Received: from mail-sor-f65.google.com (mail-sor-f65.google.com. [209.85.220.65])
+        by mx.google.com with SMTPS id ffacd0b85a97d-3c70b6348casor1860596f8f.0.2025.08.26.12.46.00
+        for <kedarhpatil93@gmail.com>
+        (Google Transport Security);
+        Tue, 26 Aug 2025 12:46:00 -0700 (PDT)
+Received-SPF: pass (google.com: domain of kedarhpmakeapp@gmail.com designates 209.85.220.65 as permitted sender) client-ip=209.85.220.65;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20230601 header.b=LIMAJEq3;
+       spf=pass (google.com: domain of kedarhpmakeapp@gmail.com designates 209.85.220.65 as permitted sender) smtp.mailfrom=kedarhpmakeapp@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20230601; t=1756237560; x=1756842360; dara=google.com;
+        h=mime-version:date:message-id:subject:to:from:from:to:cc:subject
+         :date:message-id:reply-to;
+        bh=seQQ83MMHy5xSz6SvwbAyYwNeZvVrBP23jqjbg0R+tA=;
+        b=LIMAJEq3c64YYRBOg59jE6BaBtjT8dhPRsw+JfV5UVZy8QCPFHJ03/De2MqZ65UMz4
+         NQcBOTvKVWcQjjUpgSf3MWlzlgyV/+eFiiS+5exUmsev7Nf2pS/NQFXQPynZ12QP/3Xn
+         0r1pZnO6kKyKOxqRyloO7RRCnpdsTlb2PpP0Y/JfbeUWAidsoT6k/BcORKLWsehIzhY8
+         MDBDcHSNecLqndWJcMqp7hkmxIKrHZSTDIr72RRinsgbUy2QWjoveytovJ+WCVh6z9Ns
+         qxHnfuPS7/WoR8D8g6qtpcmOGU5knoQKv8Q5+GJa1np3O/edK/xKKe2LYOrXJkHsyN9X
+         mAEw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1756237560; x=1756842360;
+        h=mime-version:date:message-id:subject:to:from:x-gm-message-state
+         :from:to:cc:subject:date:message-id:reply-to;
+        bh=seQQ83MMHy5xSz6SvwbAyYwNeZvVrBP23jqjbg0R+tA=;
+        b=A0Rqvb+TJB2kK60L3R03bpHy7mY1BZluttrj0cAQK/An+NrUElFJZIrqmv5LU4YmHY
+         pB94FXDhW8jnHLvy/jbY024V69w9uAtZyAZ1iYOzo1xxBz7mm00QGE8EJBTesLR9Gbq0
+         BBOtpJM3KVwwiTJ/qqdPPqfaOM5xAMf/742Q+BbP8PNI9SGfFT2eDngAehHtmFmfH/zc
+         cQHoQ0RPfOtEotcGNjT8DOsJBGwuiIa1Icf69Bgk8KXHa15OuruaUZA9KUSzND+dFHOr
+         irefm/CktImQ1KVlv/LHd94eopj+pnz2pmqoa/EroX8OhASRFvA+La7PvFSBkS5RpeWv
+         mNUg==
+X-Gm-Message-State: AOJu0YxTj2tNI7I9+ulrKF4BKsf8Czr2Ho8sCld8ClEn6ZGInkPv3aGn
+	bt8kZv6WpOjquV/SRH8lp26WmU2bdj9ubeHUGHxc2kk941HFV7Ti09nYlOCo8Fgl270=
+X-Gm-Gg: ASbGncvX/JG9yNqa0pmqlaJFWl32zdzIA5YpcPGYrRdSF0LrFOj2mYopeXRGt6Psbte
+	gFqa071l2cZCdcjfRZILrofuDXB5riOq3JdI2YQqFfmR9nxZBkUTZwhU1A2UeGNpV1vvnTI9PWP
+	+K0CCn/rlpgeIVmUzh+twwibMXTWVTI8uExurtZYZqiMqzFw9/KQcCMMMcQ8q9PGUq0fOMTWoRb
+	906lf8+mRlUR/IGF7rLQfLGxAiZhGwpZcTbGj3Tpl2rs7JJs8m2xD392tLZarzB/9PRuG/0inYY
+	y0Dme2NYoAfX51e3g097Gx8qML6k0PtLqYRlQiCl5FJBeNCEJQ3KCXmlQAnliPilqQoK0v1SDYY
+	qMq6zV+lDSvRkZJqMA8R0Q4YRE/2VYLu/B0pXRvPeFd+qo0DJBLyToAIgpntJbqnaOYfBrybtW2
+	tVEr3KPDt2ZcbmZ5CRSVV2rrEy3Dz+kN0M4NK4iIiNQUHJ4Ugjyojxef8AzRIzUsDd7AACy500m
+	6t2iSw=
+X-Google-Smtp-Source: AGHT+IFS0N0a78Ucz4vXKLGq4D3hTVxvFGWha/8KhLv5TMbGROx5rxmD7O1mTcydyFVoAr+0Ztwf9w==
+X-Received: by 2002:a05:6000:2c01:b0:3b3:9c75:acc6 with SMTP id ffacd0b85a97d-3c5de34badbmr13107847f8f.59.1756237559930;
+        Tue, 26 Aug 2025 12:45:59 -0700 (PDT)
+Return-Path: <kedarhpmakeapp@gmail.com>
+Received: from imt-engine-scheduling-engine-7cff7f5d86-htxfv.mail-private.make.com (ec2-34-254-1-9.eu-west-1.compute.amazonaws.com. [34.254.1.9])
+        by smtp.gmail.com with ESMTPSA id ffacd0b85a97d-3c7119c4200sm17361547f8f.53.2025.08.26.12.45.59
+        for <kedarhpatil93@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Tue, 26 Aug 2025 12:45:59 -0700 (PDT)
+From: kedarhpmakeapp@gmail.com
+To: kedarhpatil93@gmail.com
+Subject: =?UTF-8?Q?Weekly_Review_Report_=E2=80=93_The_Ritz-?=
+ =?UTF-8?Q?Carlton=2C_Pune?=
+Message-ID: <b669e037-6659-b62f-e640-d00e63bab06d@gmail.com>
+Date: Tue, 26 Aug 2025 19:45:59 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--_NmP-77155f8c5e02c4e9-Part_1"
+
+----_NmP-77155f8c5e02c4e9-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+```html
+
+Dear Ritz-Carlton, Pune Management,
+
+This email summarizes recent =
+guest feedback regarding your hotel. The
+Ritz-Carlton, Pune currently holds=
+ a 4.7 rating based on 6341 total reviews.
+
+Recent guest reviews reveal =
+mixed sentiments. While some praise the hotel's
+amazing food and location, =
+others express concerns about the buffet dinner
+quality at "three kitchen,"=
+ valet service, and the cleanliness of long-term
+unoccupied rooms. The =
+hotel entry's location in a crowded square is also a
+recurring negative point.
+
+To improve guest experience, we suggest focusing=
+ on enhancing valet parking
+procedures to ensure a more attentive and =
+efficient service. This would address
+the recurring negative feedback about=
+ this aspect of the hotel.
+
+In response to the guest who mentioned =
+disappointment with the valet service and
+the crowded location, we would =
+suggest replying something along these lines: "We
+appreciate your feedback =
+regarding your recent stay. We apologize that the valet
+service and hotel entry location did not meet your expectations. We are
+constantly striving to improve, and your comments will help us achieve that
+goal. We value your business and hope to welcome you back for a more
+satisfactory experience."
+
+Sincerely,
+The Hospitality Review Assistant
+
+```
+----_NmP-77155f8c5e02c4e9-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+```html
+<p>Dear Ritz-Carlton, Pune Management,</p>
+
+<p>This email summarizes recent guest feedback regarding your hotel.  The =
+Ritz-Carlton, Pune currently holds a 4.7 rating based on 6341 total reviews=
+.</p>
+
+<p>Recent guest reviews reveal mixed sentiments. While some praise =
+the hotel's amazing food and location, others express concerns about the =
+buffet dinner quality at "three kitchen," valet service, and the =
+cleanliness of long-term unoccupied rooms.  The hotel entry's location in a=
+ crowded square is also a recurring negative point.</p>
+
+<p>To improve guest experience, we suggest focusing on enhancing valet =
+parking procedures to ensure a more attentive and efficient service.  This =
+would address the recurring negative feedback about this aspect of the =
+hotel.</p>
+
+<p>In response to the guest who mentioned disappointment with =
+the valet service and the crowded location, we would suggest replying =
+something along these lines: "We appreciate your feedback regarding your =
+recent stay. We apologize that the valet service and hotel entry location =
+did not meet your expectations. We are constantly striving to improve, and =
+your comments will help us achieve that goal.  We value your business and =
+hope to welcome you back for a more satisfactory experience."</p>
+
+<p>Sincerely,<br>
+The Hospitality Review Assistant</p>
+```
+
+----_NmP-77155f8c5e02c4e9-Part_1--
