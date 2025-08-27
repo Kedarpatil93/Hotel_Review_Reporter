@@ -197,4 +197,3 @@ Output: simple, useful, fast → email only.
 ## Flow Diagram
 
 ![Flow Diagram](docs/Flow_Diagram.png)
-![alt text](Flow_Diagram.png)
