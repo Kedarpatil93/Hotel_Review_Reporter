@@ -137,21 +137,9 @@ Output: simple, useful, fast → email only.
    <p><strong>Reply Suggestion</strong><br/>
    {{reply_suggestion}}</p>
 ```
-
-
-## 6) Estimated Development Time
-
-- Google Sheets + Scheduler → 0.5h  
-- Places API integration → 2h  
-- Review parsing + aggregator → 2h  
-- Gemini prompt tuning → 1–2h  
-- Email (HTML) + logging → 1h  
-
-**Total:** ~6–8 hours  
-
 ---
 
-## 7) Cost Estimate (Free Tier, 10 properties)
+## 6) Cost Estimate (Free Tier, 10 properties)
 
 - **Gemini API:** free/low tier (until quota hit)  
 - **Google Places API:** few € / month  
@@ -160,7 +148,7 @@ Output: simple, useful, fast → email only.
 
 ---
 
-## 8) Automated flow structure
+## 7) Automated flow structure
 
 - Every Friday at 07:00 CET → each active property gets an email  
 - Email includes:  
@@ -174,7 +162,7 @@ Output: simple, useful, fast → email only.
 
 ---
 
-## 9) Future Upgrades
+## 8) Future Upgrades
 
 - Add **Booking.com** (via Apify Actor)  
 - Add **TripAdvisor** reviews  
@@ -184,7 +172,7 @@ Output: simple, useful, fast → email only.
 
 ---
 
-## 10) Developer Notes
+## 9) Developer Notes
 
 - `report_language` controls AI output (default = `en`)  
 - Deduplicate reviews via `(source + author + date + first 40 chars)`  
@@ -194,6 +182,6 @@ Output: simple, useful, fast → email only.
 
 ---
 
-## Flow Diagram
+## 10) Flow Diagram
 
 ![Flow Diagram](docs/Flow_Diagram.png)
