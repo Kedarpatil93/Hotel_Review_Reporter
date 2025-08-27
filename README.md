@@ -75,15 +75,15 @@ Output: simple, useful, fast → email only.
 
 **B. For each property (Iterator)**  
 
-1. **Google Reviews** (HTTP → Places API)  
+   1. **Google Reviews** (HTTP → Places API)  
    - Pull avg rating, total ratings, last 3 reviews  
 
-2. **Normalize reviews**  
+   2. **Normalize reviews**  
    - Format: `(author, rating★ – date): text`  
    - Remove emojis/extra whitespace  
    - Truncate >800 chars  
 
-3. **Gemini AI – Summary + Suggestions**  
+   3. **Gemini AI – Summary + Suggestions**  
    - System prompt: *“You are a hospitality reputation analyst. Output in {{report_language}}.”*  
    - User prompt:
      ```
@@ -97,15 +97,15 @@ Output: simple, useful, fast → email only.
      3. Draft a polite reply for 1 review.
      ```  
 
-4. **Compose Email** (Tools → Compose String, HTML mode)  
+   4. **Compose Email** (Tools → Compose String, HTML mode)  
    - Subject: `Weekly AI Review Report – {{name}}`  
    - Body: ratings, reviews, AI analysis  
 
-5. **Gmail – Send Email**  
+   5. **Gmail – Send Email**  
    - To: `report_email`  
    - Body: HTML  
 
-6. **Log run in Google Sheets (`runs_log`)**  
+   6. **Log run in Google Sheets (`runs_log`)**  
    - `timestamp = now`  
    - `property_id`  
    - `source = google`  
@@ -122,21 +122,22 @@ Output: simple, useful, fast → email only.
 **Body (HTML example):**  
 
 ```html
-<p>Hello,</p>
-<p>Here is your weekly summary of new public reviews:</p>
+   <p>Hello,</p>
+   <p>Here is your weekly summary of new public reviews:</p>
 
-<p><strong>Ratings</strong><br/>
-Google: {{google_avg}} ★ ({{google_total}} reviews)</p>
+   <p><strong>Ratings</strong><br/>
+   Google: {{google_avg}} ★ ({{google_total}} reviews)</p>
 
-<p><strong>AI Summary</strong><br/>
-{{summary}}</p>
+   <p><strong>AI Summary</strong><br/>
+   {{summary}}</p>
 
-<p><strong>AI Improvement Suggestion</strong><br/>
-{{improvement}}</p>
+   <p><strong>AI Improvement Suggestion</strong><br/>
+   {{improvement}}</p>
 
-<p><strong>Reply Suggestion</strong><br/>
-{{reply_suggestion}}</p>
----
+   <p><strong>Reply Suggestion</strong><br/>
+   {{reply_suggestion}}</p>
+```
+
 
 ## 6) Estimated Development Time
 
@@ -196,3 +197,4 @@ Google: {{google_avg}} ★ ({{google_total}} reviews)</p>
 ## Flow Diagram
 
 ![Flow Diagram](docs/Flow_Diagram.png)
+![alt text](Flow_Diagram.png)
